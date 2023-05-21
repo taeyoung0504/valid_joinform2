@@ -1,0 +1,15 @@
+<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+
+
+
+<div sec:authorize="hasRole('ADMIN')">
+    <h1>Welcome, ADMIN! </h1>
+</div>
+
+
+<a sec:authorize="hasRole('ADMIN')" th:href="@{/admin/manage}">관리자 페이지</a>
+
+</html>
